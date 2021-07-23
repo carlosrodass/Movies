@@ -14,10 +14,9 @@ const Nabvar = () => {
                     <Navbar.Collapse id='responsive-navbar-nav' className="justify-content-end">
                         <Nav>
                             <Nav.Link href="/">Trending&#128293;</Nav.Link>
-                            <Nav.Link href="/movies">Movies&#128249;</Nav.Link>
-                            <Nav.Link href="/series">TV series&#128252;</Nav.Link>
-                            <Nav.Link href="/list">My list&#128194;</Nav.Link>
-                            <Nav.Link href="/search">Search&#128270;</Nav.Link>
+                            <Nav.Link href="/PopularMovies">Movies&#128249;</Nav.Link>
+                            <Nav.Link href="/PopularSeries">TV series&#128252;</Nav.Link>
+                            <Nav.Link href="/Search">Search&#128270;</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

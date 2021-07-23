@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Submit from './Submit';
-import { searchMovie } from './../api';
+import Submit from '../Submit';
+import { searchMovie, searchTvShow } from '../../api';
 import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap'
 import ReactStars from 'react-stars';
@@ -14,7 +14,7 @@ const Search = () => {
     const handleSubmit = async (e) => {
         console.log(search);
         if (search) {
-            const response = await searchMovie(search);
+            const response = await searchTvShow(search);
             setData(response.results)
             console.log(response.results);
         }

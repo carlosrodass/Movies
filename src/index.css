@@ -21,40 +21,11 @@ code {
 }
 
 .carousel{
-  /* margin: 0px auto;
-  padding: 30px;
-  width: 100%; */
-  /* height: auto; */
-
   width:auto;
   height:auto;
   margin: auto;
 }
 
-/* .intro{
-  width: 100%;
-  height: 90vh;
-  margin: auto;
-  margin-top: 2vh;
-
-
-  background-image: url('https://parqueastur.com/images/2020/07/25/estrenoscooby.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.wrapper{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 50%);
-}
-
-.intro h1{
-  font-size: 9rem;
-  font-weight: bolder;
-  color: white
-} */
 
 .list{
   width: 100%;
@@ -92,11 +63,6 @@ code {
   
 }
 
-/* .wrapper-detail{
-
-} */
-
-
 .single-movie .image-container{
   display: block;
   float: left;
@@ -116,7 +82,6 @@ code {
   float: left;
   padding-left: 20px;
   text-align: left;
-  /* margin-top: 15vh; */
   width: 50%;
 }
 
@@ -126,5 +91,48 @@ code {
   margin-right: 20px;
   text-align: left;
 
+}
+
+.chip-container{
+  width: 90%;
+  height: auto;
+  margin: 0px auto;
+  /* border: 1px solid black; */
+  justify-content: center;
+}
+
+.introduction{
+  width: 90%;
+  height: auto;
+  margin: 0px auto;
+  text-align: left;
+  padding: 10px;
+}
+
+.introduction h5{
+  padding: 10px;
+  font-size: 1.5vw;
+  font-weight: lighter;
+  color: black;
+}
+
+
+.form{
+  width: 80%;
+  margin: 30px auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.groupOne{
+  display: inline-block;
+  vertical-align: middle;
+  
+  width: 90%;
+}
+.groupTwo{
+  display: inline-block;
+  vertical-align: middle;
+  width: 10%;
 }
 

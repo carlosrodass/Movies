@@ -1,8 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Intro from './Intro';
-import Search from './Search';
+
+//Pages
+import Trending from './Pages/Trending';
+import PopularSeries from './Pages/PopularSeries';
+import PopularMovies from './Pages/PopularMovies';
+import Search from './Pages/Search';
+
 import SingleMovie from './SingleMovie';
+import SingleSerie from './SingleSerie';
 import Nabvar from './Nabvar';
 
 const Index = () => {
@@ -11,13 +17,22 @@ const Index = () => {
             <Nabvar />
             <Switch>
                 <Route exact path='/'>
-                    <Intro />
+                    <Trending />
+                </Route>
+                <Route exact path='/PopularMovies'>
+                    <PopularMovies />
+                </Route>
+                <Route exact path='/PopularSeries'>
+                    <PopularSeries />
+                </Route>
+                <Route path='/Search'>
+                    <Search />
                 </Route>
                 <Route path='/movie/:id'>
                     <SingleMovie />
                 </Route>
-                <Route path='/search'>
-                    <Search />
+                <Route path='/serie/:id'>
+                    <SingleSerie />
                 </Route>
             </Switch>
         </Router>

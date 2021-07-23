@@ -12,8 +12,8 @@ const Submit = ({
 }) => {
     return (
         <div>
-            <Form>
-                <Form.Group className="mb-3" id="formBasicEmail">
+            <Form className="form">
+                <Form.Group className="mb-2" id="formBasicEmail" className="groupOne">
                     <Form.Control
                         type="text"
                         placeholder="Enter your movie"
@@ -22,9 +22,12 @@ const Submit = ({
                         value={search}
                         onChange={(e) => setSearch(e.target.value)} />
                 </Form.Group>
-                <Button variant="warning" type="button" onClick={handleSubmit}>
-                    Search
-                </Button>
+                <div className="groupTwo">
+                    <Button variant="warning" type="button" className="btn" onClick={handleSubmit}>
+                        Search
+                    </Button>
+                </div>
+
             </Form>
         </div>
     )
