@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Submit from '../Submit';
-import { searchMovie, searchTvShow } from '../../api';
+import { searchMovie, searchTvShow, multi } from '../../api';
 import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap'
 import ReactStars from 'react-stars';
@@ -9,18 +9,27 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 const Search = () => {
 
     const [search, setSearch] = useState('');
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]);
+    const [isFounded, setIsFounded] = useState(false);
 
     const handleSubmit = async (e) => {
         console.log(search);
         if (search) {
-            const response = await searchTvShow(search);
-            setData(response.results)
-            console.log(response.results);
+
+            try {
+                const response = await multi(search);
+                setData(response.results)
+                console.log(response.results);
+                setIsFounded(true);
+            } catch (error) {
+                throw error;
+            }
+
         }
 
         e.preventDefault();
     }
+    
 
     return (
         <div className="list">
@@ -30,9 +39,9 @@ const Search = () => {
                 setSearch={setSearch}
             />
             {
-                data.length ? data.map((item) => {
+               data.length ? data.map((item) => {
                     const { id, poster_path, title, release_date, item_count } = item;
-                    return (    
+                    return (
                         <Card className="card" key={id}>
                             <Link to={`movie/${id}`}>
                                 <Card.Img className="card-image" variant="top" src={`https://image.tmdb.org/t/p/w500/${poster_path}`} />
@@ -42,7 +51,7 @@ const Search = () => {
                                     {title}
                                 </Card.Title>
                                 <Card.Text className="card-text">
-                                    <p style={{ fontSize: '1.9vh',fontWeight: 'bolder' , color: 'gray'}}>
+                                    <p style={{ fontSize: '1.9vh', fontWeight: 'bolder', color: 'gray' }}>
                                         Release Date: {release_date}
                                     </p>
 
@@ -51,7 +60,10 @@ const Search = () => {
                             </Card.Body>
                         </Card>
                     )
-                }) : <p>Search for every movie you want</p>
+                }) : <div style={{ height: '95vh' }}>
+                    <p>Search for Movie or Tv show you want</p>
+                </div>
+
             }
         </div>
     )

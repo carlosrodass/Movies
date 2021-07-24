@@ -2,8 +2,8 @@ import React, { useState, useEffect, useReducer } from 'react'
 import List from '../List'
 import Slider from '../Slider'
 import GenreChip from '../GenreChip';
-
 import { getList, getMovieGenres } from './../../api';
+import NotFound from '../NotFound';
 
 const Trending = () => {
 
@@ -31,6 +31,9 @@ const Trending = () => {
     return (
         <>
             <section className="intro">
+            <div className="introduction">
+                  <h1 style={{margin: '20px', fontWeight: 'lighter'}}>Welcome! Check out Upcomming movies and Series! </h1>
+                </div>
                 <Slider />
                 <div className="introduction">
                     <h5>Click and filter by Genre!</h5>
@@ -58,7 +61,8 @@ const Trending = () => {
                                 />
                             )
                         })) : (
-                            <h1>No movies with that genre</h1>
+                            <NotFound/>
+                            // <h1>No movies with that genre</h1>
                         )
                     }
                 </div>

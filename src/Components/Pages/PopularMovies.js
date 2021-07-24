@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useReducer } from 'react'
 import { gettingLastMovies, getPeople } from './../../api';
 import List from '../List';
+import People from '../People';
 
 const PopularMovies = () => {
     const [movie, setMovie] = useState([]);
@@ -26,6 +27,7 @@ const PopularMovies = () => {
     return (
         <>
             <section className="intro">
+                {/* <People/> */}
                 <div className="introduction">
                     <h5>Popular Movies this week, take a look and click whatever your favourite!  </h5>
                 </div>

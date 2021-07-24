@@ -6,6 +6,7 @@ const trendingTvSeries = `https://api.themoviedb.org/3/tv/popular?api_key=${KEY}
 const getLastMovies = `https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&language=en-US&page=1`;
 const getMovieGen = `https://api.themoviedb.org/3/genre/movie/list?api_key=${KEY}&language=en-US`;
 const getPopularPeople = `https://api.themoviedb.org/3/person/popular?api_key=${KEY}&language=en-US&page=1`
+const multiSearch = `https://api.themoviedb.org/3/search/multi?api_key=${KEY}&language=en-US&page=1&include_adult=false`
 
 export async function getListToSlider() {
     try {
@@ -99,6 +100,17 @@ export async function searchTvShow(name) {
     }
 }
 
+export async function multi(name) {
+    try {
+        const response = await fetch(`https://api.themoviedb.org/3/search/multi?api_key=${KEY}&language=en-US&query=${name}&page=1&include_adult=false`);
+        const item = await response.json();
+        return item;
+    } catch (error) {
+        console.log(error);
+        throw error;
+    }
+}
+
 export async function getMovieGenres() {
 
     try {
@@ -117,7 +129,8 @@ export async function getPeople() {
     try {
         const response = await fetch(getPopularPeople);
         const item = await response.json();
-        return item;
+        console.log(item.results);
+        return item.results;
     } catch (error) {
         console.log(error);
         throw error;

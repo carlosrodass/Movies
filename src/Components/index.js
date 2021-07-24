@@ -10,6 +10,7 @@ import Search from './Pages/Search';
 import SingleMovie from './SingleMovie';
 import SingleSerie from './SingleSerie';
 import Nabvar from './Nabvar';
+import Footer from './Footer';
 
 const Index = () => {
     return (
@@ -35,6 +36,7 @@ const Index = () => {
                     <SingleSerie />
                 </Route>
             </Switch>
+            <Footer />
         </Router>
     );
 };

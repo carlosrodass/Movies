@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { getPeople } from './../api';
+// import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 
-const people = () => {
+const People = () => {
+
+    const [data, setData] = useState([getPeople]);
+    const [index, setIndex] = useState(getPeople.length)
+
+    const checkNumber = (number) => {
+        if (number > data.length - 1) {
+            return 0;
+        }
+        if (number < 0) {
+            return data.length - 1;
+        }
+        return number;
+
+    };
 
     const prevPerson = () => {
         setIndex((index) => {
@@ -17,28 +33,43 @@ const people = () => {
         })
     }
 
+    const peopleList = async () => {
+        const response = await getPeople();
+        setData(response);
+        console.log(response);
+    }
+
+    useEffect(() => {
+        peopleList()
+    }, [])
+
     return (
         <article className="review">
-            <div className="img-container">
-                <img className="person-img" src={image}></img>
-                <span className="quote-icon">
-                    <FaQuoteRight />
-                </span>
-            </div>
+            {
+                data && data.map((T) => {
+                    <div>
+                        <div className="img-container">
+                            <img className="person-img" ></img>
+                            <span className="quote-icon">
+                                {/* <FaQuoteRight /> */}
+                            </span>
+                        </div>
 
-            <h4 className="author">{name}</h4>
-            <p className="job">{job}</p>
-            <p className="info">{text}</p>
+                        {/* <h4 className="author">{name}</h4> */}
+                        {/* <p className="job">{job}</p> */}
+                        {/* <p className="info">{text}</p> */}
 
-            <div className="button-container">
-                <button className="prev-btn" onClick={() => prevPerson()}>
-                    <FaChevronLeft />
-                </button>
-                <button className="next-btn" onClick={() => nextPerson()}>
-                    <FaChevronRight />
-                </button>
-            </div>
-            <button className="random-btn" onClick={() => randomPerson()}>Random worker</button>
+                        <div className="button-container">
+                            <button className="prev-btn" onClick={() => prevPerson()}>
+                                {/* <FaChevronLeft /> */}
+                            </button>
+                            <button className="next-btn" onClick={() => nextPerson()}>
+                                {/* <FaChevronRight /> */}
+                            </button>
+                        </div>
+                    </div>
+                })
+            }
         </article>
     )
 }
