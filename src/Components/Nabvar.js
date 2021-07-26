@@ -8,7 +8,7 @@ const Nabvar = () => {
             <Navbar className="navbar" collapseOnSelect expand='sm' bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand>
-                        <span>MOVIES FINDER&#11088;</span>
+                        <a href="https://www.linkedin.com/in/carlos-rodas-65303a1a8/" target="_blank">MOVIES FINDER&#11088;</a>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                     <Navbar.Collapse id='responsive-navbar-nav' className="justify-content-end">

@@ -32,7 +32,7 @@ const Trending = () => {
         <>
             <section className="intro">
             <div className="introduction">
-                  <h1 style={{margin: '20px', fontWeight: 'lighter'}}>Welcome! Check out Upcomming movies and Series! </h1>
+                  <h1>Welcome! Check out Upcomming movies and Series! </h1>
                 </div>
                 <Slider />
                 <div className="introduction">

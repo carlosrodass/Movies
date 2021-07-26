@@ -36,7 +36,7 @@ const Index = () => {
                     <SingleSerie />
                 </Route>
             </Switch>
-            <Footer />
+            {/* <Footer /> */}
         </Router>
     );
 };

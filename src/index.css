@@ -20,6 +20,11 @@ code {
     monospace;
 }
 
+.navbar a{
+  color: white;
+  text-decoration: none;
+}
+
 .carousel{
   width:90%;
   height:auto;
@@ -27,6 +32,28 @@ code {
   margin-top: 10px;
 }
 
+.introduction{
+  width: 90%;
+  height: auto;
+  margin: 0px auto;
+  text-align: left;
+  padding: 10px;
+}
+
+.introduction h1{
+  font-size: 4.5vh;
+  margin: 20px;
+  font-weight: lighter;
+
+}
+
+.introduction h5{
+  font-size: 4.5vh;
+  color: black;
+  padding: 10px;
+  font-weight: lighter;
+
+}
 
 .list{
   width: 100%;
@@ -86,11 +113,39 @@ code {
   width: 50%;
 }
 
+.single-movie .text-container h1{
+font-size: 3vw;
+font-weight: bolder;
+margin-top: 20px;
+margin-bottom: 20px;
+text-transform: uppercase;
+}
+
+.single-movie .text-container h5{
+  font-size: 1.3vw;
+  font-weight: bolder;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  }
+
+.single-movie .text-container p{
+  font-size: 1.5vw;
+  font-weight: lighter;
+  margin: 20px auto;
+  color: gray;
+  }
+
 .single-movie .text-container .genres{
   display: block;
   float: left;
   margin-right: 20px;
   text-align: left;
+
+}
+
+.single-movie .text-container .genres p{
+font-size: 3vh;
 
 }
 
@@ -102,20 +157,7 @@ code {
   justify-content: center;
 }
 
-.introduction{
-  width: 90%;
-  height: auto;
-  margin: 0px auto;
-  text-align: left;
-  padding: 10px;
-}
 
-.introduction h5{
-  padding: 10px;
-  font-size: 1.5vw;
-  font-weight: lighter;
-  color: black;
-}
 
 
 .form{
@@ -180,5 +222,306 @@ code {
   letter-spacing: 0.3vw;
   color: white;
   text-align: center;
+}
+
+@media only screen and (max-width: 320px) {
+
+  .carousel{
+    width:100%;
+  }
+
+  .carousel h1{
+    font-size: 2vh;
+  }
+  .carousel p{
+  display: none;
+  }
+
+  .introduction h1{
+    font-size: 4.5vh;
+    margin: 20px;
+    font-weight: lighter;
+  
+  }
+  
+  .introduction h5{
+    font-size: 4.5vh;
+    color: black;
+    padding: 10px;
+    font-weight: lighter;
+  
+  }
+
+  .single-movie{
+    width: 100%;
+  }
+
+  .single-movie .image-container{
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+  }
+  
+  .single-movie .image-container img{
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .single-movie .text-container{
+    display: block;
+    float: left;
+    padding-left: 20px;
+    text-align: left;
+    width: 50%;
+  }
+
+  .single-movie .text-container h1{
+    font-size: 2.5vh;
+  }
+
+  .single-movie .text-container h5{
+    font-size: 1.3vw;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    }
+  
+  .single-movie .text-container .genres{
+    display: block;
+    float: left;
+    margin-right: 20px;
+    text-align: left;
+  
+  }
+
+  .form{
+    width: 100%;
+    margin: 30px auto;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .groupOne{
+    display: inline-block;
+    vertical-align: middle;
+    
+    width: 70%;
+  }
+  .groupTwo{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+  }
+  
+  .notfound{
+    width: 100%;
+    height: 250px;
+    padding: 50px;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  
+
+  .carousel{
+    /* width:90%; */
+    height:auto;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .carousel h1{
+    font-size: 2.8vh;
+  }
+
+  .carousel p{
+    display: none;
+  }
+
+  .introduction h1{
+      font-size: 2.5vh;
+      /* margin: 20px; */
+      font-weight: lighter;
+    
+    }
+    
+  .introduction h5{
+      font-size: 2.5vh;
+      color: black;
+      padding: 10px;
+      font-weight: lighter;
+    
+  }
+
+  .notfound p{
+    width: 100%;
+    font-size: 2.4vh;
+  }
+
+  .single-movie{
+    width: 90%;
+  }
+
+  .single-movie .image-container{
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+  }
+  
+  .single-movie .image-container img{
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .single-movie .text-container{
+    display: block;
+    float: left;
+    padding-left: 20px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .single-movie .text-container h1{
+    font-size: 4vh;
+  }
+
+  .single-movie .text-container h5{
+    font-size: 2.8vh;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    }
+
+  .single-movie .text-container p{
+    font-size: 1.5vh;
+  }
+  
+  .single-movie .text-container .genres{
+    display: block;
+    float: left;
+    margin-right: 20px;
+    text-align: left;
+  
+  }
+
+  .form{
+    width: 90%;
+    margin: 30px auto;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .groupOne{
+    display: inline-block;
+    vertical-align: middle;
+    
+    width: 70%;
+  }
+  .groupTwo{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+  }
+  
+  .notfound{
+    width: 100%;
+    height: 250px;
+    padding: 50px;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .carousel{
+    /* width:90%; */
+    height:auto;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .carousel h1{
+    font-size: 3.1vh;
+  }
+
+  .carousel p{
+    display: none;
+  }
+
+  .introduction h1{
+    font-size: 2.5vh;
+    /* margin: 20px; */
+    font-weight: lighter;
+  
+  }
+  
+.introduction h5{
+    font-size: 2.5vh;
+    color: black;
+    padding: 10px;
+    font-weight: lighter;
+  
+}
+
+.notfound p{
+  width: 100%;
+  font-size: 2.4vh;
+}
+
+.single-movie{
+  width: 90%;
+}
+
+.single-movie .image-container{
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.single-movie .image-container img{
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.single-movie .text-container{
+  display: block;
+  float: left;
+  padding-left: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.single-movie .text-container h5{
+  font-size: 2.5vh;
+}
+
+.single-movie .text-container h1{
+  font-size: 4vh;
+}
+
+.single-movie .text-container p{
+  font-size: 2.5vh;
+}
+
+.single-movie .text-container .genres{
+  display: block;
+  float: left;
+  margin-right: 20px;
+  text-align: left;
+
+}
 }
 
